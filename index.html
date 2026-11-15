@@ -10,6 +10,11 @@
 <meta property="og:type" content="website">
 <meta property="og:locale" content="pl_PL">
 <meta property="og:url" content="https://praktykasieci.pl/">
+<meta property="og:image" content="https://praktykasieci.pl/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Mikołaj Jaczyński — Sieci wod-kan w praktyce">
+<meta name="twitter:card" content="summary_large_image">
 <meta property="og:title" content="Praktyka sieci · już wkrótce">
 <meta property="og:description" content="Blog o modelach, GIS i danych w sieciach wod-kan. Pierwszy artykuł 5 stycznia 2027, potem raz w miesiącu.">
 <link rel="canonical" href="https://praktykasieci.pl/">
@@ -93,6 +98,17 @@ main{flex:1}
 .s-marka .s-haslo{margin-top:12px!important;gap:14px;font-size:14.5px;line-height:22px;color:#c9d6df}
 .s-marka .kreska{width:32px;height:4px;border-radius:2px}
 @media (max-width:520px){.s-marka{gap:16px}.s-marka .znak{width:72px;height:88px}.s-marka .s-nazwisko{font-size:26px!important;line-height:30px!important}.s-marka .s-podpis{font-size:10px;letter-spacing:.18em}.s-marka .s-haslo{font-size:13px;line-height:19px;gap:10px}.s-marka .kreska{width:28px}}
+/* notka o prywatności (jak na modelesieci.pl) */
+.prywatnosc{padding-top:18px;padding-bottom:28px;font-size:12px;line-height:1.55;color:var(--muted)}
+.prywatnosc summary{cursor:pointer;width:max-content;font-family:var(--font-mono);font-size:11px;letter-spacing:.03em;list-style:none}
+.prywatnosc summary::-webkit-details-marker{display:none}
+.prywatnosc summary::before{content:"+ "}
+.prywatnosc details[open] summary::before{content:"− "}
+.prywatnosc summary:hover,.prywatnosc summary:focus-visible{color:var(--ink)}
+.prywatnosc summary:focus-visible{outline:2px solid var(--wodociag);outline-offset:3px}
+.prywatnosc .txt{margin-top:8px;padding:12px 14px;max-width:760px;background:var(--surface);border:1px solid var(--line)}
+.prywatnosc .txt p{margin:0 0 6px;font-size:12px;line-height:1.55}
+.prywatnosc .txt p:last-child{margin:0}
 </style>
 </head>
 <body>
@@ -150,6 +166,20 @@ main{flex:1}
         </ul>
         <p class="et narzedzia">EPANET · SWMM · QGIS · PostgreSQL · Python</p>
       </div>
+    </div>
+  </section>
+  <section class="pas">
+    <div class="ramka prywatnosc">
+      <details>
+        <summary>Polityka prywatności</summary>
+        <div class="txt">
+          <p><strong>Administrator:</strong> Mikołaj Jaczyński. Kontakt w sprawach danych osobowych: przez <a href="https://www.linkedin.com/in/mikolajjaczynski" target="_blank" rel="noopener">profil LinkedIn</a>.</p>
+          <p><strong>Co zbiera ta strona:</strong> nic. Nie używa ciasteczek, analityki, narzędzi śledzących ani formularzy. Czcionki i grafiki są wczytywane z tego samego serwera, bez połączeń z usługami firm trzecich.</p>
+          <p><strong>Hosting:</strong> stronę udostępnia GitHub Pages (GitHub, Inc.). Przy każdym wejściu serwer GitHub może zapisywać w logach adres IP odwiedzającego, w celu zapewnienia bezpieczeństwa i działania usługi (art. 6 ust. 1 lit. f RODO). Szczegóły: <a href="https://docs.github.com/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener">oświadczenie o prywatności GitHub</a>.</p>
+          <p><strong>Linki zewnętrzne:</strong> po kliknięciu odnośnika do LinkedIn lub wysłaniu wiadomości e-mail obowiązują zasady prywatności tych usług.</p>
+          <p><strong>Twoje prawa:</strong> dostęp do danych, ich sprostowanie, usunięcie, ograniczenie przetwarzania, sprzeciw oraz skarga do Prezesa Urzędu Ochrony Danych Osobowych.</p>
+        </div>
+      </details>
     </div>
   </section>
 </main>
