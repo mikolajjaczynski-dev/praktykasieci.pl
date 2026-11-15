@@ -109,6 +109,32 @@ main{flex:1}
 .prywatnosc .txt{margin-top:8px;padding:12px 14px;max-width:760px;background:var(--surface);border:1px solid var(--line)}
 .prywatnosc .txt p{margin:0 0 6px;font-size:12px;line-height:1.55}
 .prywatnosc .txt p:last-child{margin:0}
+
+/* nawigacja w pasku (jak na pełnej stronie bloga) */
+.nawigacja{display:flex;align-items:center;gap:22px}
+.nawigacja>a.nav-link{color:#fff;text-decoration:none;font-family:var(--font-mono);font-size:12px;letter-spacing:.06em;text-transform:uppercase;padding:6px 0;border-bottom:2px solid transparent}
+.nawigacja>a.nav-link:hover{border-bottom-color:#6fa8d0}
+.nawigacja>a[aria-current]{border-bottom-color:#5fbf92}
+.nawigacja .hamburger{display:none;position:relative}
+.hamburger summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:center;width:44px;height:34px;border:1px solid rgba(255,255,255,.28);border-radius:2px;color:#fff}
+.hamburger summary::-webkit-details-marker{display:none}
+.hamburger summary:focus-visible{outline:2px solid #6fa8d0;outline-offset:3px}
+.hamburger svg{width:18px;height:18px}
+.hamburger .ikona-x{display:none}
+.hamburger[open] .ikona-x{display:block}
+.hamburger[open] .ikona-menu{display:none}
+.hamburger .menu-lista{position:absolute;right:0;top:calc(100% + 10px);z-index:10;min-width:180px;background:#0f2e44;border:1px solid rgba(255,255,255,.18);border-radius:2px;padding:6px 0}
+.hamburger .menu-lista a{display:block;padding:10px 16px;color:#fff;text-decoration:none;font-family:var(--font-mono);font-size:12px;letter-spacing:.06em;text-transform:uppercase}
+.hamburger .menu-lista a:hover,.hamburger .menu-lista a[aria-current]{background:rgba(111,168,208,.16)}
+.hamburger .menu-lista a[aria-current]{box-shadow:inset 3px 0 0 #5fbf92}
+@media (max-width:520px){.nawigacja{gap:10px}.nawigacja>a.nav-link{display:none}.nawigacja .hamburger{display:block}}
+
+/* o autorze — skrót na stronie głównej */
+.autor{padding-top:44px;padding-bottom:48px}
+.autor .sekcja{margin-bottom:18px}
+.autor p{margin:0 0 14px;font-size:16px;line-height:26px}
+.autor .wiecej{font-weight:600;text-decoration:none}
+.autor .wiecej:hover{text-decoration:underline}
 </style>
 </head>
 <body>
@@ -133,7 +159,11 @@ main{flex:1}
       <svg class="znak" aria-hidden="true"><use href="#syg"/></svg>
       <div><span class="marka-nazwisko">Mikołaj Jaczyński</span><span class="marka-podpis">Sieci wod-kan w&nbsp;praktyce</span></div>
     </div>
-    <a class="li" href="https://www.linkedin.com/in/mikolajjaczynski" target="_blank" rel="noopener" aria-label="Profil LinkedIn"><svg aria-hidden="true"><use href="#ikona-li"/></svg><span class="tekst">LinkedIn</span></a>
+    <nav class="nawigacja" aria-label="Główna">
+      <a class="nav-link" href="o-mnie/">O mnie</a>
+      <details class="hamburger"><summary aria-label="Menu"><svg class="ikona-menu" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><svg class="ikona-x" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></summary><div class="menu-lista"><a href="o-mnie/">O mnie</a></div></details>
+      <a class="li" href="https://www.linkedin.com/in/mikolajjaczynski" target="_blank" rel="noopener" aria-label="Profil LinkedIn"><svg aria-hidden="true"><use href="#ikona-li"/></svg><span class="tekst">LinkedIn</span></a>
+    </nav>
   </div>
 </header>
 
@@ -165,6 +195,15 @@ main{flex:1}
           <li><span><b>Analizy i&nbsp;automatyzacja.</b> Wiek wody, kanalizacja w&nbsp;czasie ulewy. Python w&nbsp;codziennej pracy z&nbsp;modelem.</span></li>
         </ul>
         
+      </div>
+    </div>
+  </section>
+  <section class="pas">
+    <div class="ramka autor">
+      <h2 class="sekcja">O autorze</h2>
+      <div>
+        <p>Nazywam się <b>Mikołaj Jaczyński</b> i&nbsp;od ponad dziesięciu lat zajmuję się sieciami wodociągowymi i&nbsp;kanalizacyjnymi. Buduję i&nbsp;kalibruję modele hydrauliczne, analizuję dane pomiarowe i&nbsp;pilnuję, żeby GIS, SCADA i&nbsp;model mówiły o&nbsp;sieci to samo.</p>
+        <a class="wiecej" href="o-mnie/">Więcej o mnie →</a>
       </div>
     </div>
   </section>
