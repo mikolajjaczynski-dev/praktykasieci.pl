@@ -200,7 +200,15 @@ a.marka{color:inherit;text-decoration:none}
     <p>Piszę dla inżynierów. Piszę dla osób, które na podstawie wyników modeli podejmują decyzje. Piszę dla każdego, kogo interesuje ta tematyka.</p>
 
     <h2>Kontakt</h2>
-    <p>Chętnie porozmawiam o&nbsp;modelach, danych i&nbsp;sieciach. Najłatwiej znaleźć mnie na <a href="https://www.linkedin.com/in/mikolajjaczynski" target="_blank" rel="noopener">LinkedIn</a>. Możesz też napisać na adres <span class="email">mikolaj.jaczynski @ gmail.com</span> (bez spacji).</p>
+    <p>Chętnie porozmawiam o&nbsp;modelach, danych i&nbsp;sieciach. Najłatwiej znaleźć mnie na <a href="https://www.linkedin.com/in/mikolajjaczynski" target="_blank" rel="noopener">LinkedIn</a>. Możesz też napisać na adres <span id="adres-email">widoczny po włączeniu JavaScriptu</span>.</p>
+    <script>
+      /* Adres składany w przeglądarce z kawałków, żeby nie było go w kodzie strony (ochrona przed zbieraczami adresów) */
+      (function () {
+        var u = ['miko', 'laj', '.jacz', 'ynski'], d = ['gm', 'ail'], t = 'com';
+        var el = document.getElementById('adres-email');
+        if (el) el.textContent = u.join('') + String.fromCharCode(64) + d.join('') + '.' + t;
+      })();
+    </script>
     <p>Blog jest moim prywatnym projektem.</p>
     <a class="powrot" href="../">← Strona główna</a>
   </article>
