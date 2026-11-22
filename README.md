@@ -5,6 +5,7 @@ z licznikiem sprawdzanym w przeglądarce, czcionki hostowane lokalnie w `fonts/`
 Obrazek podglądu linku (`og-image.png`, 1200×630) i rozwijana „Polityka prywatności” jak na modelesieci.pl.
 
 - `o-mnie/index.html` – podstrona „O mnie” (tekst z `o-mnie.md`). Link w pasku; na telefonie pod menu (hamburger, bez JavaScriptu). Na stronie głównej krótka sekcja „O autorze”.
+- `sitemap.xml` (strona główna i „O mnie”) i `robots.txt` dla Google Search Console. Dodając podstronę, dopisz ją do `sitemap.xml` i zmień `lastmod`.
 - `404.html` przekierowuje nieistniejące podstrony na stronę główną <https://praktykasieci.pl/>.
 - W repozytorium nie ma treści przyszłych artykułów. Pełna strona bloga zostanie wgrana w dniu startu.
 

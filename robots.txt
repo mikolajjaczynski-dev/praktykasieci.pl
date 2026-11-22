@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://praktykasieci.pl/sitemap.xml
